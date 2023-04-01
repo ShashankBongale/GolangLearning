@@ -1,16 +1,16 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strings"
+	"net/http"
 )
 
 func main() {
-	fmt.Println("Enter input")
-	inputBuffer := bufio.NewReader(os.Stdin)
-	input, _ := inputBuffer.ReadString('\n')
-	inputUpper := strings.ToUpper(input)
-	fmt.Println(inputUpper)
+	http.HandleFunc("/", BasicHandler)
+	http.ListenAndServe("192.168.0.105:3000", nil)
+}
+
+func BasicHandler(writer http.ResponseWriter, reader *http.Request) {
+
+	fmt.Fprintf(writer, "Hello")
 }
