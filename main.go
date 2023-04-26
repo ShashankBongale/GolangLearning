@@ -24,4 +24,15 @@ func main() {
 	//shorthand notation
 	mySlice2 := []string{"abc", "xyz"}
 	fmt.Println(mySlice2)
+
+	//declaring and using maps
+	var myMap map[string]int = make(map[string]int)
+	myMap["shashank"] = 1000
+	fmt.Println(myMap)
+
+	//map with slice as value
+	var mapWithSlice map[string][]int = make(map[string][]int)
+	mapWithSlice["shashank"] = append(mapWithSlice["shashank"], 300, 400)
+	fmt.Println(mapWithSlice)
+
 }
