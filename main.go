@@ -2,15 +2,26 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/", BasicHandler)
-	http.ListenAndServe("192.168.0.105:3000", nil)
-}
 
-func BasicHandler(writer http.ResponseWriter, reader *http.Request) {
+	//declaring and using implicit datatype
+	//Basic syntax with declaring any variable => var variableName dataType. var is a keyword which is used to declare one or more variables
+	var iVal int = 10
+	iVal2 := 20
+	fmt.Println(iVal, iVal2)
 
-	fmt.Fprintf(writer, "Hello")
+	//declaring and using array
+	var arr [3]int = [3]int{10, 25, 35}
+	fmt.Println(arr)
+
+	//declaring and using slice
+	var mySlice []int = []int{-100, -200}
+	mySlice = append(mySlice, 100, 200)
+	fmt.Println(mySlice)
+
+	//shorthand notation
+	mySlice2 := []string{"abc", "xyz"}
+	fmt.Println(mySlice2)
 }
