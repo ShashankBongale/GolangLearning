@@ -35,4 +35,29 @@ func main() {
 	mapWithSlice["shashank"] = append(mapWithSlice["shashank"], 300, 400)
 	fmt.Println(mapWithSlice)
 
+	for i := 0; i < 3; i++ {
+		fmt.Println(arr[i])
+	}
+
+	//using struct
+	var myStruct struct {
+		name string
+		id   int
+	}
+
+	myStruct.name = "shashank"
+	myStruct.id = 100
+
+	fmt.Println(myStruct)
+
+	//declaring a user defined struct type
+	type myType struct {
+		name string
+		sVal string
+	}
+
+	var myVar myType
+	myVar.name = "Random"
+	fmt.Println(myVar)
+
 }
