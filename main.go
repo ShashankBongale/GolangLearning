@@ -99,7 +99,7 @@ func main() {
 	}
 
 	pkg2.MyPrint()
-	fmt.Println("This array is also from package 2", pkg2.Pkg2Arr)
+	//fmt.Println("This array is also from package 2", pkg2.Pkg2Arr)
 
 }
 
