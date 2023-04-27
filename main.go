@@ -101,6 +101,11 @@ func main() {
 	pkg2.MyPrint()
 	//fmt.Println("This array is also from package 2", pkg2.Pkg2Arr)
 
+	var customStructVar pkg2.MyStruct
+	customStructVar.Name = "abc"
+
+	customStructVar.PrintMyStruct()
+
 }
 
 //defining functions in go
