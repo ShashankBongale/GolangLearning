@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"demo/pkg2"
+	"fmt"
+)
 
 func main() {
 
@@ -95,4 +98,12 @@ func main() {
 		fmt.Println("Value from my array at index ", index, " is ", value)
 	}
 
+	pkg2.MyPrint()
+	fmt.Println("This array is also from package 2", pkg2.Pkg2Arr)
+
 }
+
+//defining functions in go
+//func functionName (parameters) (return values) {
+//	function body
+//}
